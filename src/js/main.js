@@ -79,8 +79,12 @@ window.onload = function () {
   var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game');
 
 //TODO 1.2 Añadir los states 'boot' BootScene, 'menu' MenuScene, 'preloader' PreloaderScene, 'play' PlayScene, 'gameOver' GameOver.
-
+  game.state.add('boot', BootScene);
+  game.state.add('menu', MenuScene);
+  game.state.add('preloader', PreloaderScene);
+  game.state.add('play', PlayScene);
+  game.state.add('gameOver', GameOver);
 //TODO 1.3 iniciar el state 'boot'. 
-
+  game.state.start('boot');
     
 };
