@@ -81,8 +81,7 @@ var wfconfig = {
  
 //TODO 3.2 Cargar Google font cuando la página esté cargada con wfconfig.
 //TODO 3.3 La creación del juego y la asignación de los states se hará en el método init().
-
-window.onload = function () {
+function init(){
   var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game');
 
 //TODO 1.2 Añadir los states 'boot' BootScene, 'menu' MenuScene, 'preloader' PreloaderScene, 'play' PlayScene, 'gameOver' GameOver.
@@ -93,5 +92,7 @@ window.onload = function () {
   game.state.add('gameOver', GameOver);
 //TODO 1.3 iniciar el state 'boot'. 
   game.state.start('boot');
-    
+}
+window.onload = function () {
+  WebFont.load(wfconfig);
 };
