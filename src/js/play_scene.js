@@ -133,6 +133,7 @@ var PlayScene = {
     
     onPlayerFell: function(){
         //TODO 6 Carga de 'gameOver';
+        this.game.state.start('gameOver');
     },
     
     checkPlayerFell: function(){
