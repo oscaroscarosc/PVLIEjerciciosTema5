@@ -299,6 +299,7 @@ var PlayScene = {
     
     onPlayerFell: function(){
         //TODO 6 Carga de 'gameOver';
+        this.destroy();
         this.game.state.start('gameOver');
     },
     
@@ -352,7 +353,12 @@ var PlayScene = {
     },
     
     //TODO 9 destruir los recursos tilemap, tiles y logo.
-
+    destroy: function(){
+        this._rush.destroy();
+        this.map.destroy();
+        this.backgroundLayer.destroy();
+        this.game.world.setBounds(0,0,800,600); 
+    }
 };
 
 module.exports = PlayScene;
